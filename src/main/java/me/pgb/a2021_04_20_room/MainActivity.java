@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         saveDatabase = SaveDatabase.getInstance(getApplicationContext());
         stockDao = saveDatabase.stockDao();
         allStocks = stockDao.getAll();
-        Stock stock = new Stock("Hello");
+        Stock stock = new Stock("CSE 3200");
         observable = io.reactivex.Observable.just(stock);
         Observer<Stock> observer = getStockObserver(stock);
 
